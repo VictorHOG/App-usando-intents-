@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:layout_marginTop="@dimen/marginTitle"
+        android:textSize="@dimen/marginTitle"
+        android:textColor="@color/colorTitle"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/etNameHeroe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Write a heroe name"
+        android:layout_marginTop="@dimen/marginTitle"
+        android:layout_marginBottom="@dimen/marginTitle"/>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:text="@string/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/marginTitle"
+        android:layout_gravity="right"/>
+
+</LinearLayout>
