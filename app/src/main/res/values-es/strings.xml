@@ -4,4 +4,5 @@
     <string name="title">Super Heroes</string>
     <string name="btnSend">Enviar</string>
     <string name="notificacion">Has enviado %s</string>
+    <string name="etHint">Nombre del heroe</string>
 </resources>

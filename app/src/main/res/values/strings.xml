@@ -3,4 +3,5 @@
     <string name="title">SuperHeroes</string>
     <string name="btnSend">Send</string>
     <string name="notificacion">You send %s</string>
+    <string name="etHint">Heroe name</string>
 </resources>

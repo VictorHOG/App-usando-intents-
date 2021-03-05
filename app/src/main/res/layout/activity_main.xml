@@ -1,36 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title"
-        android:layout_marginTop="@dimen/marginTitle"
-        android:textSize="@dimen/marginTitle"
-        android:textColor="@color/colorTitle"
-        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="@dimen/photoSize"
+        android:layout_height="@dimen/photoSize"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@android:drawable/ic_menu_camera" />
 
     <EditText
-        android:id="@+id/etNameHeroe"
-        android:layout_width="match_parent"
+        android:id="@+id/eTHeroeName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Write a heroe name"
-        android:layout_marginTop="@dimen/marginTitle"
-        android:layout_marginBottom="@dimen/marginTitle"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="124dp"
+        android:ems="10"
+        android:hint="@string/etHint"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/ivPhoto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="212dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/rbPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:progressTint="@color/powerColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <Button
         android:id="@+id/btnSend"
-        android:text="@string/btnSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginStart="@dimen/marginTitle"
-        android:layout_gravity="right"/>
-
-</LinearLayout>
+        android:layout_marginTop="108dp"
+        android:text="@string/btnSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbPower" />
+</androidx.constraintlayout.widget.ConstraintLayout>
